@@ -45,13 +45,14 @@ def list_testcases(api_name: Optional[str] = None, testcase_type: Optional[str] 
 @app.post("/generate/")
 def generate_testcase(req: GenerateRequest):
     existing_testcases = get_testcases(req.api_name, req.testcase_type)
-    # You may want to specify the model name or pass it from the request
+    # Fix parameter order to match function signature
     generated = generate_testcase_llm(
         req.api_name,
         req.request_type,
         req.testcase_type,
-        existing_testcases,
-        req.user_prompt,
-        model_name="distilgpt2"
+        req.user_prompt,  # This was in wrong position
+        existing_testcases
     )
     return {"generated_testcase": generated}
+
+
