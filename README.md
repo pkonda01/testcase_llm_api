@@ -296,6 +296,51 @@ poetry add --group dev package-name  # For development dependencies
 }
 ```
 
+## Roadmap & Next Steps
+
+This POC demonstrates the core functionality of AI-powered test case generation. Here are the planned enhancements:
+
+### Phase 1: Core Improvements (Weeks 1-2)
+- **OpenAPI Specification Parsing**: Import and analyze Swagger/OpenAPI specs
+- **Enhanced Validation**: Validate generated test cases for correctness
+- **User Authentication**: JWT-based authentication system
+- **Better Error Handling**: Comprehensive error handling and logging
+- **Configuration Management**: Environment-based configuration
+
+### Phase 2: Quality & UX (Weeks 3-4)
+- **Web Interface**: Simple web UI for test case management
+- **Test Case Editing**: Edit and refine generated test cases
+- **Duplicate Detection**: Prevent duplicate test case generation
+- **Export Functionality**: Export to Postman, JSON, or other formats
+- **Performance Optimization**: Caching and response time improvements
+
+### Phase 3: Production Features (Month 2)
+- **PostgreSQL Migration**: Scale beyond SQLite
+- **Redis Caching**: Improve response times with caching
+- **Rate Limiting**: API usage controls
+- **Monitoring & Metrics**: Application performance monitoring
+- **Docker Containerization**: Easy deployment and scaling
+
+### Phase 4: Advanced Features
+- **Test Execution**: Execute generated test cases automatically
+- **CI/CD Integration**: GitHub Actions and Jenkins plugins
+- **Multiple LLM Support**: OpenAI, Anthropic, and other providers
+- **Fine-tuned Models**: Domain-specific model training
+- **Analytics Dashboard**: Test coverage and quality metrics
+
+### Phase 5: Enterprise Features
+- **Multi-tenancy**: Organization and team isolation
+- **Advanced Analytics**: Business intelligence and reporting
+- **Third-party Integrations**: Postman, Insomnia, testing frameworks
+- **On-premise Deployment**: Enterprise deployment options
+
+### Architecture Evolution
+```
+Current: FastAPI + SQLite + Ollama
+Next: FastAPI + PostgreSQL + Redis + Multiple LLM providers
+Future: Microservices + Event-driven + ML Pipeline
+```
+
 ## Contributing
 
 1. Fork the repository
